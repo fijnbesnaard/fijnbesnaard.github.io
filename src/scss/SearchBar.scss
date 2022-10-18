@@ -1,6 +1,23 @@
-@use "./shared.scss";
+@import './shared.scss';
 
-.ui.button {
-  background: indigo;
-  color: #fff;
+.search-bar {
+  h1 {
+    color: $white;
+  }
+  margin-top: 2rem;
+  text-align: center;
+  .form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .input-action {
+
+  }
+
+  .ui.button {
+    background: $cobalt-light;
+    color: #fff;
+  }
+
 }

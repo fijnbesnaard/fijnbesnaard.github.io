@@ -1,0 +1,67 @@
+// COLORS
+$off-white:   #E7E7E7;
+$light:     #E7FFFF;
+$dark:      #15232D;
+
+$cobalt-light:  #1F4662;
+$cobalt:    #193549;
+$blue:      #0085FD; // Tod\o Done
+$green:     #1eff01;
+$orange:    #FF9D00; // Archives
+$pink:      #FF618C; // Personals
+
+$yellow:    #FFC600; // Interactions
+$mint:      #2AFFDF;
+
+$white: #fff;
+$black: #000;
+
+html {
+  overflow: hidden;
+}
+
+body {
+  .fsbg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      content: '';
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 3960 3960' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.92' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+      mix-blend-mode: multiply;
+      // mix-blend-mode: difference;
+      // mix-blend-mode: exclusion;
+      mix-blend-mode:color-burn;
+      opacity: 0.9;
+    }
+
+    &:after {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      content: '';
+      // background-color:hsla(205,51%,25%,1);
+      background-color: $off-white;
+      background-image:
+      radial-gradient(at 54% 81%, hsla(208,100%,49%,0.75) 0px, transparent 50%),
+      // radial-gradient(at 63% 5%, hsla(205,48%,19%,1) 0px, transparent 50%),
+      radial-gradient(at 7% 83%, hsla(36,100%,50%,0.5) 0px, transparent 50%),
+      radial-gradient(at 84% 60%, hsla(343,100%,69%,1) 0px, transparent 50%),
+      radial-gradient(at 58% 16%, hsla(46,100%,50%,0.5) 0px, transparent 50%),
+      radial-gradient(at 2% 7%, hsla(170,100%,57%,1) 0px, transparent 50%);
+      background-size: cover;
+      background-repeat: no-repeat;
+      z-index: -1;
+    }
+  }
+}
